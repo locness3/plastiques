@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Détermination de type de plastique</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Détermination des types de plastiques</h1>
+    <div id="densité">
+      <h3>Le plastique flotte-il dans l'eau douce ?</h3>
+      <button onClick="Oui('densité')">Oui</button>
+      <button onClick="Non('densité')">Non</button>
+    </div>
+    <div id="élasticité" class="question-hide">
+      <h3>Le plastique s'étire-il ?</h3>
+      <button onClick="Oui('élasticité')">Oui</button>
+      <button onClick="Non('élasticité')">Non</button>
+    </div>
+    <div id="densité-salée" class="question-hide">
+      <h3>Le plastique flotte-il dans l'eau salée ?</h3>
+      <button onClick="Oui('densité-salée')">Oui</button>
+      <button onClick="Non('densité-salée')">Non</button>
+    </div>
+    <div id="thermop-salée" class="question-hide">
+      <h3>Le plastique se colle-il sur lui et flotte-il dans l'eau bouillante salée ?</h3>
+      <button onClick="Oui('thermop-salée')">Oui</button>
+      <button onClick="Non('thermop-salée')">Non</button>
+    </div>
+    <div id="thermop" class="question-hide">
+      <h3>Le plastique se rétracte-il dans l'eau bouillante ?</h3>
+      <button onClick="Oui('thermop')">Oui</button>
+      <button onClick="Non('thermop')">Non</button>
+    </div>
+    <h3 id="reponse">Votre plastique est du <span id="type-plastique"><em>Répondez aux questions</em></span></h3>
+  </body>
+  <script>
+    var densite = document.getElementById("densité");
+    var elasticite = document.getElementById("élasticité");
+    var densiteSalee = document.getElementById("densité-salée");
+    var thermopSalee = document.getElementById("thermop-salée");
+    var thermop = document.getElementById("thermop");
+    var typePlastique = document.getElementById("type-plastique");
+    var reponse = document.getElementById("reponse");
+    var Oui = function(test) {
+      
+      if (test == "densité") {
+        densite.style.display = "none";
+        elasticite.style.display = "block";
+      }
+      else if (test == "densité-salée") {
+        densiteSalee.style.display = "none";
+        typePlastique.textContent = "PS";
+        reponse.style.display = "block";
+      }
+      else if (test == "élasticité") {
+        elasticite.style.display = "none";
+        thermopSalee.style.display = "block";
+      }
+      else if (test == "thermop-salée") {
+        thermopSalee.style.display = "none";
+        typePlastique.textContent = "PEBD";
+        reponse.style.display = "block";
+      }
+      else if (test == "thermop") {
+        thermop.style.display = "none";
+        typePlastique.textContent = "PET";
+        reponse.style.display = "block";
+      }
+      
+    };
+    var Non = function(test) {
+      
+      if (test == "densité") {
+        densite.style.display = "none";
+        densiteSalee.style.display = "block";
+      }
+      else if (test == "densité-salée") {
+        densiteSalee.style.display = "none";
+        thermop.style.display = "block";
+      }
+      else if (test == "élasticité") {
+        elasticite.style.display = "none";
+        typePlastique.textContent = "PP";
+        reponse.style.display = "block";
+      }
+      else if (test == "thermop-salée") {
+        thermopSalee.style.display = "none";
+        typePlastique.textContent = "PEHD";
+        reponse.style.display = "block";
+      }
+      else if (test == "thermop") {
+        thermop.style.display = "none";
+        typePlastique.textContent = "PVC";
+        reponse.style.display = "block";
+      }
+      
+    };
+  </script>
+</html>

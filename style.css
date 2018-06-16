@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+body {
+  background-color: #c01360;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 900;
+}
+h1 {
+  font-size: 90px;
+  text-align: right;
+}
+.question-hide {
+  display: none;
+}
+#reponse {
+  display: none;
+}
+button {
+  border: 2px solid #ee3b67;
+  background-color: #c01360;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 150px;
+  height: 80px;
+  font-family: inherit;
+  font-size: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ee3b67;
+}
+button:active {
+  margin-top: 2px;
+}
+h3 {
+  font-size: 30px;
+}
+@media only screen and (max-width: 630px) {
+  h1 {
+    font-size: 55px;
+  }
+}
+@media only screen and (max-width: 525px) {
+  h1 {
+    font-size: 35px;
+  }
+}
