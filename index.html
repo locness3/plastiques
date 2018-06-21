@@ -36,10 +36,14 @@
     </div>
     <h3 id="reponse">Votre plastique est du <span id="type-plastique"><em>Répondez aux questions</em></span></h3>
     <br>
-    <button id="restart" onClick="location.reload()"><img src="repeat(1).svg" alt="Recommencer"></button>
+    <button id="restart" onClick="location.reload()"><img src="repeat(1).svg" alt="Recommencer" title="Recommencer" data-duration="400"
+  data-arrow="false"
+  data-animation="scale"
+></button>
   </body>
   <script src="https://unpkg.com/tippy.js@1.4.2/dist/tippy.min.js">
   <script>
+    tippy('#restart');
     var densite = document.getElementById("densité");
     var elasticite = document.getElementById("élasticité");
     var densiteSalee = document.getElementById("densité-salée");
