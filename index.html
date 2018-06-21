@@ -43,7 +43,11 @@
   </body>
   <script src="https://unpkg.com/tippy.js@1.4.2/dist/tippy.min.js">
   <script>
-    tippy('#restart');
+    tippy('#restart' {
+  position: 'bottom',
+  animation: 'scale',
+  duration: 100,
+  arrow: true);
     var densite = document.getElementById("densité");
     var elasticite = document.getElementById("élasticité");
     var densiteSalee = document.getElementById("densité-salée");
