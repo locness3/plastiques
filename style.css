@@ -30,16 +30,17 @@ button {
   font-size: 30px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 0.2s;
 }
 button:hover {
   background-color: #ee3b67;
 }
 button:active {
-  transform: translateY(2px);
-  -webkit-tranform: translateY(2px);
-  -moz-transform: translateY(2px);
-  -ms-tranform: translateY(2px);
-  -o-transform: translateY(2px);
+  transform: scale(0.9);
+  -webkit-tranform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-tranform: scale(0.9);
+  -o-transform: scale(0.9);
 }
 h3 {
   font-size: 30px;
